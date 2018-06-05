@@ -1,0 +1,47 @@
+@import 'partials/normalize';
+@import 'partials/variables';
+@import 'partials/mixins';
+
+body {
+  background-image: url(../img/coffee.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: $full-width;
+  height: $full-height;
+}
+
+.overlay {
+  background-color: $overlay;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $full-width;
+  height: $full-height;
+}
+
+#card {
+  @include center;
+  @include font-style;
+  border-radius: 20px;
+  background-color: #FFF;
+  width: 80%;
+  height: 80vh;
+
+  h1 {
+    text-align: center;
+  }
+  .container {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .chemex-img {
+    height: 28em;
+    align-self: center;
+  }
+
+  .instructions {
+    align-self: flex-start;
+  }
+}
