@@ -1,6 +1,11 @@
 
 // === MIXINS ===
 
+@mixin no-scroll {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 @mixin center {
   position: absolute;
   top: 0;
@@ -10,7 +15,14 @@
   margin: auto;
 }
 
-@mixin font-style {
+@mixin font-style($font, $size: 20px) {
   color: $dark-brown;
+  font-size: $size;
+  font-family: $font;
+}
 
+@mixin border-style($shadow: 20px, $offset: 10px) {
+  border-radius: 20px;
+  // border: 0;
+  box-shadow: $offset (-$offset) $shadow #FFF, (-$offset) $offset $shadow #FFF, (-$offset) (-$offset) $shadow #FFF, $offset $offset $shadow #FFF;
 }

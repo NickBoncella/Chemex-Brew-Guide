@@ -8,9 +8,11 @@ $light-brown: #A99985;
 $off-white: #F5F1ED;
 
 // FONT
-// @import url();
-// $font-title: '';
-// $font-text: '';
+@import url('https://fonts.googleapis.com/css?family=Oswald|Raleway');
+$oswald: 'Oswald', sans-serif;
+$raleway: 'Raleway', sans-serif;
+$font-title: $oswald;
+$font-text: $raleway;
 
 $overlay: rgba(0,0,0,0.3);
 $full-height: 100vh;

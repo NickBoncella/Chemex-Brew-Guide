@@ -3,6 +3,7 @@
 @import 'partials/mixins';
 
 body {
+  @include no-scroll;
   background-image: url(../img/coffee.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -22,26 +23,39 @@ body {
 
 #card {
   @include center;
-  @include font-style;
-  border-radius: 20px;
+  @include border-style($shadow: 30px, $offset: 20px);
   background-color: #FFF;
   width: 80%;
-  height: 80vh;
+  height: 85vh;
 
   h1 {
+    @include font-style($size: 46px, $font: $font-title);
     text-align: center;
+    margin-bottom: 0.25em;
   }
   .container {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
   }
 
-  .chemex-img {
-    height: 28em;
-    align-self: center;
+  .img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .chemex-img {
+      height: 450px;
+    }
   }
 
   .instructions {
-    align-self: flex-start;
+    @include font-style($font: $font-text);
+    margin-right: 25px;
+
+    .list-item {
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
   }
 }
