@@ -6,13 +6,24 @@
   overflow-y: hidden;
 }
 
-@mixin center {
-  position: absolute;
+@mixin center($position: absolute) {
+  position: $position;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
+}
+
+@mixin btn-style {
+  border: solid 2px #FFF;
+  border-color: $off-white;
+  border-radius: 10px;
+  color: $medium-brown;
+  text-align: center;
+  font-size: 28px;
+  padding: 15px 25px;
+  font-weight: bold;
 }
 
 @mixin font-style($font, $size: 20px) {
