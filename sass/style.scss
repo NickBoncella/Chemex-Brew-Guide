@@ -21,6 +21,8 @@ body {
   height: $full-height;
 }
 
+
+// === CONTENT ===
 #card {
   @include center;
   @include border-style($shadow: 30px, $offset: 20px);
@@ -74,6 +76,66 @@ body {
       .list-item {
         margin-bottom: 10px;
         line-height: 1.3;
+      }
+    }
+  }
+}
+
+// === MODAL ===
+// modal (background)
+.modal {
+  @include font-style($font: $font-text);
+  @include modal-style;
+
+  // modal content
+  .modal-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    background-color: $off-white;
+    border: solid 2px $medium-brown;
+    border-radius: 10px;
+    padding: 40px;
+    width: 33%;
+  }
+
+  // close button
+  .close {
+    color: $light-brown;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .cloes:focus {
+    color: $dark-brown;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  form {
+    text-align: center;
+
+    p {
+      @include font-style($size: 32px, $font: $font-title);
+      margin-bottom: 25px;
+    }
+
+    #water-input {
+      text-align: center;
+      border: solid 1px $medium-brown;
+      padding: 10px 10px;
+    }
+
+    .calc-coffee {
+      @include btn-style($text-size: 24px, $padding: 10px 15px);
+      margin-top: 35px;
+
+      &:hover {
+        background-color: #FFF;
+        border: solid 2px $medium-brown;
       }
     }
   }

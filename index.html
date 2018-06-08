@@ -11,6 +11,7 @@
 
 <body>
 
+  <!-- CONTENT -->
   <div id="content-card">
     <div class="overlay">
       <div id="card">
@@ -22,20 +23,32 @@
           </div>
           <div class="brew-container">
             <!-- calculate button -->
-            <button class="calc-btn">Calculate Coffee to Water Ratio</button>
+            <button id="modal-btn" class="calc-btn">Calculate Coffee to Water Ratio</button>
             <!-- brewing instructions -->
             <ol class="instructions">
               <li class="list-item">Weigh out coffee using a 16:1 water to coffee ratio and begin to preheat water to 203 &#8457;.</li>
               <li class="list-item">After the water is preheated, prewet the brewer with the filter inserted to remove any papery taste and discard water.</li>
               <li class="list-item">Place the brewer on the scale, put in your freshly ground coffee, and tare the scale to zero.</li>
-              <li class="list-item">Your first pour is called the bloom. Pour double the amount of coffee in water and allow the coffee to bloom for 45 seconds.</li>
-              <li class="list-item">Next, slowly pour the desired amount of water by the 3 minute mark and allow to drain. Begin the pour in the center and work outward in concentric circles followed by a center pour once the slurry is within a half inch of the top of the brewer.</li>
-              <li class="list-item">The total brew and drain time shouldbe around 5 and a half minutes.</li>
+              <li class="list-item">Your first pour is called the bloom. Pour double the amount of coffee in water and allow the coffee to bloom for atleast 30 seconds.</li>
+              <li class="list-item">Next, slowly pour the desired amount of water by the 2 and a half minute mark and allow to drain. Begin the pour in the center and work outward in concentric circles followed by a center pour once the slurry reaches the top of the brewer.</li>
+              <li class="list-item">Allow the water to drain and extract until the drain slows to a dip. This should take about 5 minutes.</li>
               <li class="list-item">Lastly, pour and enjoy!</li>
             </ol>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form>
+        <p>How much coffee would you like to brew in ounces?</p><br>
+        <input id="water-input" type="text"><br>
+        <button class="calc-coffee" type="button">Calculate Coffee Beans</button>
+      </form>
     </div>
   </div>
 
